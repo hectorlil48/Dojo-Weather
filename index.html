@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DojoWeather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header>
+      <div class="nav-container">
+        <h1 class="nav-title">DojoWeather</h1>
+        <ul class="nav-links">
+          <li><a href="#" onclick="loadTemp()">Burbank</a></li>
+          <li><a href="#" onclick="loadTemp()">Chicago</a></li>
+          <li><a href="#" onclick="loadTemp()">Dallas</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="city-temp">
+        <h2>San Jose</h2>
+        <div class="switch-temp">
+          <label>show temperature in </label>
+          <select onchange="celsiusFahrenheit(this)">
+            <option value="C">&deg;C</option>
+            <option value="F">&deg;F</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Weather Container -->
+
+      <div class="card-container">
+        <div class="card">
+          <h3>Today</h3>
+          <img src="assets/some_rain.png" alt="rain cloud" />
+          <p class="weather-discription">some rain</p>
+          <div class="temp-box">
+            <p class="red temps">24°</p>
+            <p class="blue temps">18°</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Tomorrow</h3>
+          <img src="assets/some_sun.png" alt="sun" />
+          <p class="weather-discription">some sun</p>
+          <div class="temp-box">
+            <p class="red temps">27°</p>
+            <p class="blue temps">19°</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Friday</h3>
+          <img src="assets/some_clouds.png" alt="cluds" />
+          <p class="weather-discription">some clouds</p>
+          <div class="temp-box">
+            <p class="red temps">21°</p>
+            <p class="blue temps">16°</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Saturday</h3>
+          <img src="assets/some_sun.png" alt="sun" />
+          <p class="weather-discription">some sun</p>
+          <div class="temp-box">
+            <p class="red temps">26°</p>
+            <p class="blue temps">21°</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookie Container -->
+      <div class="cookie-container" id="hide-container">
+        <img src="assets/cookie.png" alt="picture of a cookie" />
+        <div class="cookie-text">
+          <h4>Stop! Cookie time</h4>
+          <p>We use cookies (sadly not the edible ones) to personalize</p>
+          <p>content and ads, to provide social media features and to</p>
+          <p>analyse our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <button onclick="hide()">I Accept</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
